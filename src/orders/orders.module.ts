@@ -12,6 +12,8 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         options: {
           urls: ['amqp://admin:admin@localhost:5672'],
           queue: 'orders-queue',
+          exchange: 'demo',
+          routingKey: 'key-r',
         },
       },
     ]),
